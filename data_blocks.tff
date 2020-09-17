@@ -1,0 +1,14 @@
+data "aws_ami" "colby" {
+  most_recent      = true
+  owners           = ["self"]
+
+filter {
+    name   = "name"
+    values = ["centos8_*"]
+  }
+
+  filter {
+    name   = "owner-id"
+    values = ["952430311316"]
+  }
+}
